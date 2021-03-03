@@ -19,4 +19,5 @@ Route::get('/', function () {
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/gift-code', 'GiftCodeController@index')->name('gift-code');
+    Route::post('/gift-code', 'GiftCodeController@store')->name('gift-code');
 });
